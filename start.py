@@ -7,7 +7,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 from datetime import datetime
-import schedule
+import schedule as sh
 import time
 
 
@@ -350,10 +350,10 @@ def job():
     print("Time: ", datetime.now() - start_time)
 
 
-schedule.every(30).seconds.do(test)
-schedule.every().day.at("00:00").do(job)
+sh.every(30).seconds.do(test)
+sh.every().day.at("00:00").do(job)
 
 
 while 1:
-    schedule.run_pending()
+    sh.run_pending()
     time.sleep(1)
