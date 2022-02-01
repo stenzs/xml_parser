@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  app:
+    image: xml_parse
+    container_name: xml_parse
+    restart: always
+    ports:
+      - 7877:5000
