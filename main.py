@@ -13,6 +13,7 @@ import time
 
 def test():
     print("Test work")
+    print(datetime.now())
 
 
 def job():
@@ -349,7 +350,7 @@ def job():
     print("Time: ", datetime.now() - start_time)
 
 
-schedule.every(1).minutes.do(test)
+schedule.every(30).seconds.do(test)
 schedule.every().day.at("00:00").do(job)
 
 
