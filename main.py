@@ -347,6 +347,7 @@ def job():
 
 
 while True:
+    print("start loop")
     job()
     hours = 1
     time.sleep(hours * 60 * 60)
